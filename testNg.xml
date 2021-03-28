@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="接口测试集合">
+    <test  name="json提交方式登陆模块">
+        <classes>
+            <class name="com.helinfengxs.cases.LoginTestCase">
+                <methods>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- automatedScripts -->
+    <test name="表单提交方式登陆模块" preserve-order="true">
+        <classes>
+            <class name="com.helinfengxs.cases.LoginFormCase"/>
+        </classes>
+    </test>
+    <test name="查询用户信息模块" preserve-order="true">
+        <classes>
+            <class name="com.helinfengxs.cases.GetAllUserInfo"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.helinfengxs.utils.ExtentTestNGIReporterListener"/>
+
+    </listeners>
+</suite> <!-- Default Suite -->
